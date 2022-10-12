@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import '../styles/App.scss';
+import ls from '../services/local-storage';
 import TaskForm from './TaskForm';
 // import { Link, Route, Routes } from 'react-router-dom';
 
 function App() {
   const [input, setInput] = useState('');
-  const [taskItems, setTaskItems] = useState([]);
+  const [taskItems, setTaskItems] = useState(ls.get('taskItemsLS', []));
 
   const createNewTask = (taskName) => {
     if (!taskItems.find((task) => task.name === taskName)) {
@@ -24,6 +25,9 @@ function App() {
       setInput('');
     }
   };
+  useEffect(() => {
+    ls.set('taskItemsLS', taskItems);
+  }, [taskItems]);
 
   return (
     <div className="">
