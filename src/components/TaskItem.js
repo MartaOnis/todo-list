@@ -1,5 +1,5 @@
 import '../styles/TaskItem.scss';
-const TaskItem = ({ task, toggleTask, handleClickState }) => {
+const TaskItem = ({ task, toggleTask }) => {
   const changeClass = (value) => {
     if (value === true) {
       return 'clicked';
@@ -9,7 +9,7 @@ const TaskItem = ({ task, toggleTask, handleClickState }) => {
   };
   return (
     <tr>
-      <td className="taskItem" onClick={handleClickState}>
+      <td className="taskItem">
         <input
           type="checkbox"
           checked={task.done}

@@ -46,6 +46,12 @@ function App() {
         handleInput={handleInput}
       />
       <TaskTable tasks={taskItems} toggleTask={toggleTask} title="Todo" />
+      <TaskTable
+        tasks={taskItems}
+        toggleTask={toggleTask}
+        title="Done"
+        showCompleted={true}
+      />
     </div>
   );
 }
