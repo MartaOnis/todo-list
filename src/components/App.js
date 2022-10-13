@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import '../styles/App.scss';
 import ls from '../services/local-storage';
 import TaskForm from './TaskForm';
+import TaskTable from './TaskTable';
 // import { Link, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,14 @@ function App() {
       setTaskItems(newTask);
     }
   };
+  const toggleTask = (item) => {
+    setTaskItems(
+      taskItems.map((task) =>
+        task.name === item.name ? { ...task, done: !task.done } : task
+      )
+    );
+  };
+
   const handleInput = (ev) => {
     setInput(ev.currentTarget.value);
   };
@@ -36,6 +45,7 @@ function App() {
         handleSubmit={handleSubmit}
         handleInput={handleInput}
       />
+      <TaskTable tasks={taskItems} toggleTask={toggleTask} title="Todo" />
     </div>
   );
 }
