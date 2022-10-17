@@ -1,0 +1,11 @@
+@import './App';
+.taskItem {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  margin: 7px;
+  font-size: 22px;
+}
+.clicked {
+  text-decoration: line-through;
+}

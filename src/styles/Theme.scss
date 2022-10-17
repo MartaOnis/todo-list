@@ -1,24 +1,25 @@
 @import './App';
-.taskForm {
+.theme {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
-  margin-bottom: 40px;
-  &__input {
-    width: 350px;
-    height: 40px;
-    margin-right: 20px;
-    font-size: 22px;
-    border-radius: 10px;
-    padding: 9px;
-  }
-  &__btn {
+  gap: 20px;
+  &__dark {
     width: 100px;
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
-    box-shadow: 0 10px 10px hsl(0, 0%, 3%);
+    background-color: black;
+    color: white;
+  }
+  &__light {
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    color: black;
   }
 }
