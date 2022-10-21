@@ -3,23 +3,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
+  margin-top: 80px;
+  @media all and (min-width: 768px) {
+    gap: 100px;
+  }
   &__dark {
-    width: 100px;
+    width: 110px;
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
     background-color: black;
     color: white;
+    @media all and (min-width: 768px) {
+      width: 180px;
+    }
   }
   &__light {
-    width: 100px;
+    width: 110px;
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
     background-color: white;
     color: black;
+    @media all and (min-width: 768px) {
+      width: 180px;
+    }
   }
 }
