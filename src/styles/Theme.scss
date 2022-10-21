@@ -16,6 +16,7 @@
     text-align: center;
     background-color: black;
     color: white;
+    border: 1px solid white;
     @media all and (min-width: 768px) {
       width: 180px;
     }
@@ -28,6 +29,7 @@
     text-align: center;
     background-color: white;
     color: black;
+
     @media all and (min-width: 768px) {
       width: 180px;
     }

@@ -9,7 +9,7 @@ const TaskItem = ({ task, toggleTask }) => {
   };
   return (
     <tr>
-      <td className="taskItem">
+      <td className={`taskItem ${changeClass(task.done)}`}>
         <input
           type="checkbox"
           checked={task.done}

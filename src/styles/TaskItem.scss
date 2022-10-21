@@ -1,11 +1,20 @@
 @import './App';
 .taskItem {
+  width: 280px;
   display: flex;
   flex-direction: row;
   gap: 7px;
   margin: 7px;
   font-size: 22px;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgb(44, 133, 133);
+  @media all and (min-width: 768px) {
+    width: auto;
+  }
 }
 .clicked {
   text-decoration: line-through;
+  border-radius: 10px;
+  background-color: rgb(192, 109, 71);
 }
