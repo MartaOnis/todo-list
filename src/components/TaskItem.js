@@ -1,5 +1,6 @@
 import '../styles/TaskItem.scss';
-const TaskItem = ({ task, toggleTask }) => {
+import { RiCloseCircleLine } from 'react-icons/ri';
+const TaskItem = ({ task, toggleTask, removeTask }) => {
   const changeClass = (value) => {
     if (value === true) {
       return 'clicked';
@@ -7,6 +8,7 @@ const TaskItem = ({ task, toggleTask }) => {
       return '';
     }
   };
+
   return (
     <tr>
       <td className={`taskItem ${changeClass(task.done)}`}>
@@ -17,6 +19,13 @@ const TaskItem = ({ task, toggleTask }) => {
         />
         <p className={`taskItem__paragraph ${changeClass(task.done)}`}>
           {task.name}
+        </p>
+        <p>
+          <RiCloseCircleLine
+            className="delete-icon"
+            onClick={() => removeTask(task.id)}
+            id={task.id}
+          />
         </p>
       </td>
     </tr>

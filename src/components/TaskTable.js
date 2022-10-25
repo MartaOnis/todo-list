@@ -1,11 +1,22 @@
 import '../styles/TaskTable.scss';
 import TaskItem from './TaskItem';
-const TaskTable = ({ tasks, toggleTask, showCompleted = false, title }) => {
+const TaskTable = ({
+  tasks,
+  toggleTask,
+  showCompleted = false,
+  title,
+  removeTask,
+}) => {
   const taskTableRows = (doneValue) => {
     return tasks
       .filter((task) => task.done === doneValue)
       .map((task) => (
-        <TaskItem key={task.name} task={task} toggleTask={toggleTask} />
+        <TaskItem
+          key={task.name}
+          task={task}
+          toggleTask={toggleTask}
+          removeTask={removeTask}
+        />
       ));
   };
   return (

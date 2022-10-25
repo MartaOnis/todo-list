@@ -1,6 +1,6 @@
 @import './App';
 .taskItem {
-  width: 280px;
+  width: 28ch;
   display: flex;
   flex-direction: row;
   gap: 7px;
@@ -17,4 +17,7 @@
   text-decoration: line-through;
   border-radius: 10px;
   background-color: rgb(192, 109, 71);
+}
+.delete-icon {
+  font-size: 30px;
 }
