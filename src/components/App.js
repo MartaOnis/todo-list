@@ -61,7 +61,7 @@ function App() {
   }, [taskItems, theme]);
 
   return (
-    <div className={`body ${theme}`}>
+    <div className={`body body__${theme}`}>
       <TaskForm
         input={input}
         handleSubmit={handleSubmit}

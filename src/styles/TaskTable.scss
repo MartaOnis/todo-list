@@ -10,7 +10,8 @@
   @media all and (min-width: 768px) {
     margin-left: 100px;
   }
-}
-.table__title {
-  font-size: 24px;
+
+  &__title {
+    font-size: 24px;
+  }
 }

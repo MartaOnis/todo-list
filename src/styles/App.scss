@@ -11,15 +11,19 @@
 
 // $font_main: 'Open Sans', sans-serif;
 // $font_card: 'Montserrat', sans-serif;
+
 .body {
   width: 100%;
   height: 100%;
-}
-.light {
-  background-color: rgb(228, 227, 227);
-  color: rgb(4, 4, 4);
-}
-.dark {
-  background-color: rgb(43, 42, 42);
-  color: rgb(250, 248, 248);
+  min-height: 100vh;
+  overflow: auto;
+
+  &__light {
+    background-color: rgb(228, 227, 227);
+    color: rgb(4, 4, 4);
+  }
+  &__dark {
+    background-color: rgb(43, 42, 42);
+    color: rgb(250, 248, 248);
+  }
 }

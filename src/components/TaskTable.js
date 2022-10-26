@@ -26,7 +26,7 @@ const TaskTable = ({
           <th className="table__title">{title}</th>
         </tr>
       </thead>
-      <tbody>{taskTableRows(showCompleted)}</tbody>
+      <tbody className="table__item">{taskTableRows(showCompleted)}</tbody>
     </table>
   );
 };
